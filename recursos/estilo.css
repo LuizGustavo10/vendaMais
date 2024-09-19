@@ -1,0 +1,53 @@
+.menu{
+    background-color: #353d44;
+    color: white;
+    list-style: none;
+    height: 100vh;
+}
+
+.menu-item{
+    text-decoration: none;
+    font-style: none;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    margin-left: -40px;
+
+}
+.menu-item:hover{
+    font-style: none;
+    text-decoration: none;
+    color: cornflowerblue;
+    font-size: 20px;
+}
+
+/*no celular desaparece o menu lateral*/
+@media(max-width: 768px){
+    .menu{
+        display: none; /*desaparecer*/
+    }
+}
+
+.card{
+    margin: 5px;
+    box-shadow: 1px 1px 10px gray;
+    padding: 5px;
+}
+
+
+.painel{
+    max-width: 350px;
+    min-width: 300px;
+    margin: auto;
+   /* margin-top: 200px; */
+    box-shadow: 2px 2px 10px;
+    padding: 40px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+}
