@@ -1,3 +1,4 @@
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -11,19 +12,19 @@
 <body>
 
     <div class="painel">
-        <form>
+        <form action="acesso.php" method="post">
             <h3> Login </h3>
 
             <div class="form-group">
               <i class="fa-solid fa-user"></i>
               <label>CPF</label>
-              <input type="text" class="form-control" placeholder="Seu cpf">
+              <input name="cpf" type="text" class="form-control" placeholder="Seu cpf">
             </div>
 
             <div class="form-group">
               <i class="fa-solid fa-lock"></i>
               <label>Senha</label>
-              <input type="password" class="form-control" placeholder="Senha">
+              <input name="senha" type="password" class="form-control" placeholder="Senha">
             </div>
             
             <button type="submit" class="btn btn-primary">Enviar</button>
