@@ -1,5 +1,4 @@
 <?php 
-session_start();
 include "validacao.php";
 
 ?>
@@ -73,18 +72,24 @@ include "validacao.php";
                 <div class="row">
                     <div class="col-md card">
                         <h3> Cadastro </h3>
-                        <form>
+                        <form action="./usuario/inserir.php" method="post">
+
                             <div class="form-group">
-                              <label>Endereço de email</label>
-                              <input type="email" class="form-control" placeholder="Seu email">
+                              <label> Nome </label>
+                              <input name="nome" type="text" class="form-control" placeholder="seu nome">
+                            </div>
+
+                            <div class="form-group">
+                              <label>Cpf</label>
+                              <input name="cpf" type="text" class="form-control cpf" placeholder="seu cpf">
                             </div>
 
                             <div class="form-group">
                               <label>Senha</label>
-                              <input type="password" class="form-control" placeholder="Senha">
+                              <input name="senha" type="text" class="form-control" placeholder="Senha">
                             </div>
                             
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="submit" class="btn btn-success">Cadastrar</button>
                             <button type="reset" class="btn btn-danger">Limpar</button>
                           </form>
                     </div>    
@@ -134,6 +139,8 @@ include "validacao.php";
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
    
     <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script src="./recursos/script.js"></script>
 </body>
 </html>
