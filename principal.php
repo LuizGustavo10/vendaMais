@@ -1,5 +1,6 @@
 <?php 
 include "validacao.php";
+include "conexao.php";
 
 ?>
 
@@ -89,7 +90,7 @@ include "validacao.php";
                               <input name="senha" type="text" class="form-control" placeholder="Senha">
                             </div>
                             
-                            <button type="submit" class="btn btn-success">Cadastrar</button>
+                            <button type="submit" class="btn btn-success"> Cadastrar</button>
                             <button type="reset" class="btn btn-danger">Limpar</button>
                           </form>
                     </div>    
@@ -99,31 +100,34 @@ include "validacao.php";
                         <table class="table" id="tabela">
                             <thead>
                               <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Primeiro</th>
-                                <th scope="col">Último</th>
-                                <th scope="col">Nickname</th>
+                                <th scope="col"> ID </th>
+                                <th scope="col"> Nome </th>
+                                <th scope="col"> Cpf </th>
+                                <th scope="col"> Opções </th>
                               </tr>
                             </thead>
                             <tbody>
+
+                            <?php
+                              //SQL para selecionar todos os usuários
+                              $sql = "SELECT * FROM usuario";
+                              $resultado = mysqli_query($conexao, $sql);
+                              //looping onde $coluna, vai representar os dados do banco
+                              //a cada linha é uma registro diferente
+                              while($coluna = mysqli_fetch_assoc( $resultado)){  ?>
                               <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th> <?php echo $coluna['id'] ?> </th>
+                                <td> <?php echo $coluna['nome'] ?> </td>
+                                <td> <?php echo $coluna['cpf'] ?> </td>
+                                <td> 
+                                  <a href=""> <i class="fa-solid fa-pen-to-square mr-3" style="color: green;"></i></a>
+                                  <a href="<?php echo './usuario/excluir.php?id='.$coluna['id'] ?>">
+                                    <i class="fa-solid fa-trash-can" style="color: red;"></i>
+                                  </a>
+                                </td>
                               </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
+                              <?php } ?>
+
                             </tbody>
                           </table>
                     </div> 
