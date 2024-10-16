@@ -10,12 +10,15 @@
 </head>
 <body>
     <div class="container">
-        <h3>Tela de Venda</h3>
+        
 
         <div class="row">
             <div class="col-md-8"> 
+                <h3>Tela de Venda</h3>
+
                 <form action="" method="POST">
                     <div class="row">
+                        
                         <div class="form-group col-md">
                             <label> Produto </label>
                             <select class="form-control">
@@ -25,24 +28,24 @@
                             </select>
                         </div>
 
-                        <div class="form-group col-md">
+                        <div class="form-group col">
                             <label> Quantidade </label>
                             <input type="number" required class="form-control">
                         </div>
 
-                        <div class="col-md">
+                        <div class="col">
                             <button type="submit" class="btn btn-primary" style="margin-top: 32px;">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
                         </div>
 
-                        <table class="table mt-4">
+                        <table class="table mt-4 table-striped table-bordered table-sm">
                             <thead>
-                                <th> Produto </th>
-                                <th> Quantidade </th>
-                                <th> Valor Unitário </th>
-                                <th> Valor Total </th>
-                                <th> Opções </th>
+                                <th class="col-6"> Produto </th>
+                                <th class="col-1 "> Quantidade </th>
+                                <th class="col-2"> Valor </th>
+                                <th class="col-2"> Total </th>
+                                <th class="col-1"> Opções </th>
                             </thead>
                             <tbody>
                                 <tr>
@@ -50,15 +53,77 @@
                                     <td> 2 </td>
                                     <td> 20 </td>
                                     <td> 40 </td>
-                                    <td> Excluir </td>
+                                    <td> <a href=""> <i class="fa-solid fa-circle-minus" style="color:red"></i> </a> </td>
                                 </tr>
+                                <tr>
+                                    <td> Mouse </td>
+                                    <td> 2 </td>
+                                    <td> 20 </td>
+                                    <td> 40 </td>
+                                    <td> <a href=""> <i class="fa-solid fa-circle-minus" style="color:red"></i> </a> </td>
+                                </tr>
+                                <tr>
+                                    <td> Mouse </td>
+                                    <td> 2 </td>
+                                    <td> 20 </td>
+                                    <td> 40 </td>
+                                    <td> <a href=""> <i class="fa-solid fa-circle-minus" style="color:red"></i> </a> </td>
+                                </tr>
+                                <tr>
+                                    <td> Mouse </td>
+                                    <td> 2 </td>
+                                    <td> 20 </td>
+                                    <td> 40 </td>
+                                    <td> <a href=""> <i class="fa-solid fa-circle-minus" style="color:red"></i> </a> </td>
+                                </tr>
+                                
                             </tbody>
                         </table>
                         
                     </div>
                 </form>
             </div>
-            <div class="col-md-4"> Infomações Gerais </div>
+
+            <div class="col-md-4"> 
+                <h3> Resumo da Venda </h3>
+
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label> Cliente </label>
+                        <select class="form-control">
+                            <option> João </option>
+                            <option> Aline </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Funcionário </label>
+                        <select class="form-control">
+                            <option> Juliano </option>
+                            <option> Tatiane </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Quantidade Total </label>
+                        <input type="text" class="form-control" value="2" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Valor Total </label>
+                        <input type="text" class="form-control" value="40" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Observação</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+
+                    <a href="" class="btn btn-success"> <i class="fa-solid fa-cart-shopping"></i> Finalizar </a>
+                    <a href="./principal.php" class="btn btn-outline-danger"> Cancelar </a>
+                </form>
+
+            </div>
 
         </div>
 
